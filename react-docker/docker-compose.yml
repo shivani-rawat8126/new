@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    container_name: react_container1
+    build: .
+    volumes:
+      - ./src:/app/src
+      - /usr/src/app/node_modules
+    ports:
+      - 3002:3000
+    stdin_open: true
+    tty: true
+
+volumes:
+  db_data: {}
