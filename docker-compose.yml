@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+   web:
+      container_name: node-docker
+      build: .
+      volumes:
+         - .:/usr/src/app
+         - /usr/src/app/node_modules
+
+      ports:
+         - 9023:80
+      stdin_open: true
+      tty: true
